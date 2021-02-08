@@ -1,6 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
+.header {
+  display: flex;
+  background-color: #262222;
+  justify-content: left;
 }
 
+.main-content {
+  display: flex;
+}
 
+.title {
+  display: flex;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Monospace;
+  padding: 1%;
+  justify-content: center;
+}
+
+#shelf-background {
+  background-color: gray;
+  height: 93.4vh;
+  width: 20vw;
+}
+
+#header-name {
+  padding: 1%;
+  color: white;
+  font-weight: bold;
+  font-family: Monospace;
+  font-size: 2rem;
+}
+
+#char-background {
+  background-color: #2A2A2A;
+  height: 93.4vh;
+  width: 80vw;
+}
