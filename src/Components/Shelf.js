@@ -1,5 +1,8 @@
 import {Component} from 'react'
 
+
+const selectedChars = []
+
 const Shelf = () => {
     return <section>
         <div className="header">

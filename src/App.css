@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  background-color: #262222;
+  background-color: #1f2022;
   justify-content: left;
 }
 
@@ -10,23 +10,39 @@
 
 .title {
   display: flex;
-  color: white;
+  color: #fff2f1;
   font-size: 1.5rem;
   font-weight: bold;
   font-family: Monospace;
-  padding: 1%;
+  padding: 2%;
   justify-content: center;
 }
 
+.charcter-name {
+  color: #fff2f1;
+  font-family: monospace;
+  font-size: 1.2rem;
+}
+
+.char-image {
+  height: 100%;
+  padding: 15%;
+}
+
+#char-frame {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 #shelf-background {
-  background-color: gray;
+  background-color: #242323;
   height: 93.4vh;
   width: 20vw;
 }
 
 #header-name {
   padding: 1%;
-  color: white;
+  color: #fff2f1;
   font-weight: bold;
   font-family: Monospace;
   font-size: 2rem;
