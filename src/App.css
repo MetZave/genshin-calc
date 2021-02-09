@@ -18,6 +18,14 @@
   justify-content: center;
 }
 
+.chars {
+  text-align: center;
+}
+
+.shelf {
+  text-align: center;
+}
+
 .charcter-name {
   color: #fff2f1;
   font-family: monospace;
@@ -25,8 +33,9 @@
 }
 
 .char-image {
-  height: 100%;
-  padding: 15%;
+  height: 100px;
+  width: 100px;
+  padding: 20%;
 }
 
 #char-frame {

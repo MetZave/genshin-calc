@@ -748,30 +748,5 @@
         "healingBonus": 0,
         "em": 0,
         "def%": 0
-    },
-    { 
-        "id": 30,
-        "name": "Ayaka",
-        "element": "Cryo",
-        "img": "https://rerollcdn.com/GENSHIN/Characters/Ayaka.png",
-        "baseHP": 1058,
-        "baseATK": 23,
-        "baseDEF": 61,
-        "baseCR": 5,
-        "baseCD": 50,
-        "pyroDMG": 0,
-        "electroDMG": 0,
-        "cyroDMG": 0,
-        "hydroDMG": 0,
-        "geoDMG": 0,
-        "anemoDMG": 0,
-        "dendroDMG": 0,
-        "physicalDMG": 0,
-        "atk%": 0,
-        "hp%": 0,
-        "energyRecharge": 100,
-        "healingBonus": 0,
-        "em": 0,
-        "def%": 0
     }
 ]

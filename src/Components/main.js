@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import axios from 'axios'
 import Chars from './Chars.js'
+import Shelf from './Shelf.js'
 
 
 class Main extends Component {
@@ -36,11 +37,12 @@ class Main extends Component {
     }
 
 
-    toggleChars = (clickChar) => {
+    toggleChars = (props) => {
 
-        if (this.state.shelfChars.includes(clickChar)) {
+        if (this.state.shelfChars.includes(props)) {
             // Toggle off
-            axios.delete(`/api/chars/:${clickChar}`)
+            console.log(`Deleted Chars`, props)
+            axios.delete(`/api/chars/:${props}`)
                 .then(res => {
                     this.setState({
                         shelfChars: res.data
@@ -49,7 +51,8 @@ class Main extends Component {
         }
         else {
             // Toggle on
-            axios.post(`/api/chars/:${clickChar}`)
+            console.log(`Added Chars`, props)
+            axios.post(`/api/chars/:${props}`)
                 .then(res => {
                     this.setState({
                         shelfChars: res.data
@@ -57,16 +60,30 @@ class Main extends Component {
                 }).catch(err => console.log(err))
 
         }
-        console.log(`Added Chars`, clickChar)
     }
 
     render() {
         const mappedChars = this.state.mainChars.map(chars => {
-            return <Chars key={chars.name} chars={chars.name} img={chars.img} toggleChar={this.toggleChars} />
+            return <Chars key={chars.id} chars={chars.name} img={chars.img} toggleChar={this.toggleChars} />
         })
-        return <div id="char-frame">
-            {mappedChars}
-        </div>
+
+    
+        let mappedShelfChars = this.state.shelfChars.map(chars => {
+            return <Shelf key={chars.id} chars={chars.name} img={chars.img} toggleChar={this.toggleChars}/>
+        })
+
+        return <section className="main-content">
+            <div id="char-background">
+                <h2 className="title">Select Character to Calculate DPS</h2>
+                <div id="char-frame">
+                    {mappedChars}
+                </div>
+            </div>
+            <div id="shelf-background">
+                <h2 className="title">Selected Characters</h2>
+                {mappedShelfChars}
+            </div>
+        </section>
     }
 }
 
